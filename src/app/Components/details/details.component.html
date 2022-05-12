@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Product Details </h2>
+<mat-dialog-content><strong>ID:</strong> {{data.id}}</mat-dialog-content>
+<mat-dialog-content><strong>Name:</strong> {{data.name}}</mat-dialog-content>
+<mat-dialog-content><strong>Price:</strong> {{data.price|currency}}</mat-dialog-content>
+<mat-dialog-content><strong>Quantity:</strong> {{data.quantity}}</mat-dialog-content>
+<mat-dialog-content><strong>categoryID:</strong> {{data.categoryID}}</mat-dialog-content>
+
+
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close="true">Close</button>
+</mat-dialog-actions>

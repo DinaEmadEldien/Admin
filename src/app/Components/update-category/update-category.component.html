@@ -1,0 +1,17 @@
+<form #catForm="ngForm" (ngSubmit)="saveCategory()">
+  <div class="mb-3">
+    <label for="catname" class="form-label">category Name</label>
+    <input type="text" [(ngModel)]="newCategory.name"  #catName="ngModel"
+      class="form-control" [class.is-valid]="catName.valid"  [class.is-invalid]="catName.invalid && catName.touched" name="catname" id="catId" placeholder="" required minlength="3">
+    <div [hidden]="catName.valid ||catName.untouched">
+      <small *ngIf="catName.errors?.['required']"  id="helpId" class="form-text text-muted d-block">Category Name is Required</small>
+      <small *ngIf="catName.errors?.['minlength']" id="helpId" class="form-text text-muted d-block">Category Name must be 3 letters at least</small>
+
+    </div>
+  </div>
+
+
+
+  <button [disabled]="catForm.invalid" type="submit" class="btn btn-success" >Update</button>
+
+</form>

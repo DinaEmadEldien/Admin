@@ -1,0 +1,58 @@
+<!-- <select class="form-select" aria-label="Default select example" #show (change)="showproduct(show.value)" >
+  <option selected value="0">Open this select menu</option>
+  <option *ngFor="let item of categoryList" [value]="item.id">
+      {{item.name}}
+  </option>
+
+</select> -->
+
+<a name="" id="" class="btn btn-dark m-2"  [routerLink]="['/AddNewProduct']" role="button">Add Product</a><br>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">price</th>
+      <th scope="col">img</th>
+      <th scope="col">quantity</th>
+      <th scope="col">Details</th>
+      <th scope="col">Edit</th>
+      <th scope="col">Delete</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+
+     <ng-container  *ngFor="let item of prdListOfCat;let i=index;" >
+      <tr>
+        <!-- <td>{{item.id}}</td> -->
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price | currency}}</td>
+        <!-- <td><img src="https://localhost:9964/Resources/Images/{{item.img}"></td> -->
+        <td><img src="http://localhost:9964/Resources/Images/{{item.img}}"></td>
+
+        <td>
+          <ng-container [ngSwitch]="item.quantity">
+            <div *ngSwitchCase="0">Out of Stock</div>
+            <div *ngSwitchCase="1">Last Item</div>
+            <div *ngSwitchCase="2">Last 2 items</div>
+            <div *ngSwitchDefault>{{item.quantity}}</div>
+          </ng-container>
+        </td>
+
+        <td><button type="button" class="btn btn-dark"  (click)="openProductDetails(item)">Details</button></td>
+        <td><button name="" id="" class="btn btn-success"  [routerLink]="['/EditProduct',item.id]" >Update Product</button></td>
+        <td><button name="" id="" class="btn btn-dark" (click)="deleteProduct(item.id)">Delete Product</button></td>
+
+
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+
+

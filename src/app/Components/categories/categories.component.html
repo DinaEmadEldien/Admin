@@ -1,0 +1,25 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <!-- <ng-container  *ngFor="let item of ProductList" > -->
+     <ng-container  *ngFor="let item of catList" >
+      <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td><button name="" id="" class="btn btn-success"  [routerLink]="['/UpdateCategory',item.id]" >Update Category</button></td>
+        <td><button name="" id="" class="btn btn-dark" (click)="deleteCategory(item.id)">Delete Category</button></td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+<a name="" id="" class="btn btn-dark m-2"  [routerLink]="['/AddNewCategory']" role="button">Add Category</a>
+
