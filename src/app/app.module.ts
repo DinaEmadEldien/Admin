@@ -19,6 +19,7 @@ import { LoginComponent } from './Components/login/login.component';
 
 import { JwtModule } from '@auth0/angular-jwt';
 import { UpdateCategoryComponent } from './Components/update-category/update-category.component';
+import { RegisterComponent } from './Components/register/register.component';
 
 export function tokenGetter()
 {
@@ -37,7 +38,8 @@ export function tokenGetter()
     DetailsComponent,
     UpdateProductComponent,
     LoginComponent,
-    UpdateCategoryComponent
+    UpdateCategoryComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

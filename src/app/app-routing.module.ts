@@ -5,6 +5,7 @@ import { AddProductComponent } from './Components/add-product/add-product.compon
 import { CategoriesComponent } from './Components/categories/categories.component';
 import { LoginComponent } from './Components/login/login.component';
 import { ProductsComponent } from './Components/products/products.component';
+import { RegisterComponent } from './Components/register/register.component';
 import { SideBarComponent } from './Components/side-bar/side-bar.component';
 import { UpdateCategoryComponent } from './Components/update-category/update-category.component';
 import { UpdateProductComponent } from './Components/update-product/update-product.component';
@@ -19,7 +20,9 @@ const routes: Routes = [
   {path:"EditProduct/:Pid",component:UpdateProductComponent},
   {path:"Login",component:LoginComponent},
   {path:"sideBar",component:SideBarComponent},
-  {path:"UpdateCategory/:Cid",component:UpdateCategoryComponent}
+  {path:"UpdateCategory/:Cid",component:UpdateCategoryComponent},
+  {path:"Register",component:RegisterComponent},
+
 
 
 
